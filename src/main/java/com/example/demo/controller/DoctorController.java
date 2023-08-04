@@ -33,10 +33,10 @@ public class DoctorController {
         return new ResponseEntity<>(createdDoctor, HttpStatus.CREATED);
     }
 
-    // Endpoint to get a doctor by ID
-    @GetMapping("/{uid}")
-    public ResponseEntity<Doctor> getDoctorByUid(@PathVariable Long uid) {
-        Doctor doctor = doctorService.getDoctorByUid(uid);
+    // Endpoint to get a doctor by doctorId
+    @GetMapping("/{doctorId}")
+    public ResponseEntity<Doctor> getDoctorByDoctorId(@PathVariable Long doctorId) {
+        Doctor doctor = doctorService.getDoctorById(doctorId);
         if (doctor == null) {
             return ResponseEntity.notFound().build();
         } else {
@@ -56,9 +56,9 @@ public class DoctorController {
     }
 
     // Endpoint to update a doctor
-    @PutMapping("/{uid}")
-    public ResponseEntity<Doctor> updateDoctor(@PathVariable Long uid, @RequestBody Doctor updatedDoctor) {
-        Doctor doctor = doctorService.updateDoctor(uid, updatedDoctor);
+    @PutMapping("/{doctorId}")
+    public ResponseEntity<Doctor> updateDoctor(@PathVariable Long doctorId, @RequestBody Doctor updatedDoctor) {
+        Doctor doctor = doctorService.updateDoctor(doctorId, updatedDoctor);
         if (doctor != null) {
             return new ResponseEntity<>(doctor, HttpStatus.OK);
         } else {
@@ -67,9 +67,9 @@ public class DoctorController {
     }
 
     // Endpoint to delete a doctor
-    @DeleteMapping("/{uid}")
-    public ResponseEntity<Void> deleteDoctor(@PathVariable Long uid) {
-        boolean deleted = doctorService.deleteDoctor(uid);
+    @DeleteMapping("/{doctorId}")
+    public ResponseEntity<Void> deleteDoctor(@PathVariable Long doctorId) {
+        boolean deleted = doctorService.deleteDoctor(doctorId);
         if (deleted) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {
