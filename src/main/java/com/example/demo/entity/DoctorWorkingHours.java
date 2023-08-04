@@ -24,7 +24,7 @@ public class DoctorWorkingHours {
 
     // Storing the doctor's uid directly in this table as a regular Long attribute
     @Column(nullable = false)
-    private Long uid;
+    private Long doctorId;
 
     @Enumerated(EnumType.STRING)
     private DayOfWeek weekday;

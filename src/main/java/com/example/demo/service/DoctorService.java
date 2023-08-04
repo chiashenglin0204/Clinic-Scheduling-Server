@@ -21,9 +21,9 @@ public class DoctorService {
         return doctorRepository.save(doctor);
     }
 
-    // Method to get a doctor by UID
-    public Doctor getDoctorByUid(Long uid) {
-        return doctorRepository.findById(uid).orElse(null);
+    // Method to get a doctor by doctorId
+    public Doctor getDoctorById(Long doctorId) {
+        return doctorRepository.findById(doctorId).orElse(null);
     }
 
     // Method to get a list of doctors by specialization
@@ -32,8 +32,8 @@ public class DoctorService {
     }
 
     // Method to update a doctor
-    public Doctor updateDoctor(Long uid, Doctor updatedDoctor) {
-        Doctor existingDoctor = doctorRepository.findById(uid).orElse(null);
+    public Doctor updateDoctor(Long doctorId, Doctor updatedDoctor) {
+        Doctor existingDoctor = doctorRepository.findById(doctorId).orElse(null);
         if (existingDoctor != null) {
             // Update the doctor details based on the updatedDoctor object
             // For example:
@@ -49,9 +49,9 @@ public class DoctorService {
     }
 
     // Method to delete a doctor
-    public boolean deleteDoctor(Long uid) {
-        if (doctorRepository.existsById(uid)) {
-            doctorRepository.deleteById(uid);
+    public boolean deleteDoctor(Long doctorId) {
+        if (doctorRepository.existsById(doctorId)) {
+            doctorRepository.deleteById(doctorId);
             return true;
         } else {
             return false;
