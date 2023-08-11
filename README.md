@@ -13,7 +13,6 @@ Welcome to the Clinic Scheduling Server, a backend API for managing appointments
 - [Usage](#usage)
   - [Endpoints](#endpoints)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -39,7 +38,7 @@ The Clinic Scheduling Server is a RESTful API built to facilitate appointment sc
 1. Clone this repository to your local machine.
 2. Configure the database settings in the `application.properties` file.
 3. Build the project using Maven: `mvn clean install`
-4. Run the application: `java -jar target/clinic-scheduling-server.jar`
+4. Run the server: `java -jar target/demo-0.0.1-SNAPSHOT.jar`
 
 ### Configuration
 
@@ -56,7 +55,8 @@ The Clinic Scheduling Server is a RESTful API built to facilitate appointment sc
 - `PUT /appointments/{appointmentId}`: Update an existing appointment.
 - `DELETE /appointments/{appointmentId}`: Cancel an appointment.
 
-For detailed information about the available endpoints, request examples, and responses, please refer to the [API Documentation on Postman].
+For detailed information about the available endpoints, request examples, and responses, please refer to the OpenAPI specification at 
+`http://localhost:8080/swagger-ui/index.html` after running the server
 
 ## Contributing
 
