@@ -62,6 +62,3 @@ For detailed information about the available endpoints, request examples, and re
 
 Contributions to the Clinic Scheduling Server project are welcome! Please follow the [Contribution Guidelines](CONTRIBUTING.md) to get started.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
