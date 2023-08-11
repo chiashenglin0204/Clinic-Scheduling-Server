@@ -48,14 +48,14 @@ The Clinic Scheduling Server is a RESTful API built to facilitate appointment sc
 ## Usage
 
 ### Endpoints
-
+Example: Appointment Entity
 - `GET /appointments`: Get a list of all appointments.
 - `GET /appointments/{appointmentId}`: Get details of a specific appointment.
 - `POST /appointments`: Create a new appointment.
 - `PUT /appointments/{appointmentId}`: Update an existing appointment.
 - `DELETE /appointments/{appointmentId}`: Cancel an appointment.
 
-For detailed information about the available endpoints, request examples, and responses, please refer to the OpenAPI specification at 
+For detailed information about all available endpoints, request examples, and responses, please refer to the OpenAPI specification at 
 `http://localhost:8080/swagger-ui/index.html` after running the server
 
 ## Contributing
