@@ -56,7 +56,7 @@ The Clinic Scheduling Server is a RESTful API built to facilitate appointment sc
 - `PUT /appointments/{appointmentId}`: Update an existing appointment.
 - `DELETE /appointments/{appointmentId}`: Cancel an appointment.
 
-For detailed information about the available endpoints, request examples, and responses, please refer to the [API Documentation on Postman](https://api.postman.com/collections/17763757-9143a286-3297-4ee6-a262-e17e7ca1459b?access_key=PMAT-01H71YDN5T07Z47Y1YRTXGNQE0).
+For detailed information about the available endpoints, request examples, and responses, please refer to the [API Documentation on Postman].
 
 ## Contributing
 
