@@ -1,10 +1,12 @@
 package com.example.demo.service;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Doctor;
+import com.example.demo.entity.Specialization;
 import com.example.demo.repository.DoctorRepository;
 
 @Service
@@ -28,7 +30,13 @@ public class DoctorService {
 
     // Method to get a list of doctors by specialization
     public List<Doctor> getDoctorsBySpecialization(String specialization) {
-        return doctorRepository.findBySpecialization(specialization);
+        try {
+            Specialization specializationEnum = Specialization.valueOf(specialization.toUpperCase());
+            return doctorRepository.findBySpecialization(specializationEnum);
+        } catch (IllegalArgumentException ex) {
+            // Handle invalid specialization value here
+            return Collections.emptyList();
+        }
     }
 
     // Method to update a doctor
